@@ -1,16 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Mono', monospace;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     overflow: hidden;
+    position: relative;
+}
+
+#bg{
+    position: absolute;
+    width: calc(100vw + 50px);
+    height: calc(100vh + 50px);
+    background: center/cover no-repeat url('https://images.unsplash.com/photo-1610085940612-79af65006b87?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2870&q=80');
+    z-index: -1;
+    filter: blur();
+   
+}
+
+.load {
+    font-size: 30px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+.shuttle {
+    position: absolute;
+    font-size: 50px;
+    top: 30%;
+    left: -100px;
+    transform: translateX(110vw);
+    transition: transform 7000ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
